@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="tr-TR">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MINEXON - Minecraft Website Script</title>
+<link rel="icon" href="/main/theme/assets/images/brand/fav-icon.jpg" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MINEXON bir minecraft sunucuları için hazırlanmış gelişmiş minecraft sunucu yönetim yazılımıdır. Birçok özelliği sayesinde sunucu yöneticilerin iş yüklerini hafifletiyor.">
+<meta name="keywords" content="minecraft,minecraft web scripti,webscript,minecraft website scripti,monetize your minecraft server,minecraft web,donation plugin,donation store,minecraft donation plugin,sponge donation plugin,donation,minecraft plugin">
+<meta name="author" content="Hasan ESKİSARAÇ">
+<meta http-equiv="content-language" content="tr-tr">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@minexonsoftware" />
+<meta name="twitter:title" content="MINEXON - Minecraft Website Script" />
+<meta name="twitter:description" content="MINEXON bir minecraft sunucuları için hazırlanmış gelişmiş minecraft sunucu yönetim yazılımıdır. Birçok özelliği sayesinde sunucu yöneticilerin iş yüklerini hafifletiyor." />
+<meta name="twitter:creator" content="@hasaneskisarac" />
+<meta name="twitter:image:src" content="https://www.minexon.net/main/theme/assets/images/brand/default.jpg" /> 
+<meta property="og:url" content="https://www.minexon.net/" />
+<meta property="og:type" content="news/..." />
+<meta property="og:locale" content="tr-TR" />
+<meta property="og:site_name" content="MineXON" />
+<meta property="og:image" content="http://www.url.com/img.jpg" />
+<meta property="og:title" content="MINEXON - Minecraft Website Script" />
+<meta property="og:description" content="MINEXON bir minecraft sunucuları için hazırlanmış gelişmiş minecraft sunucu yönetim yazılımıdır. Birçok özelliği sayesinde sunucu yöneticilerin iş yüklerini hafifletiyor." />
+<meta property="article:published_time" content="2020-11-28 00:00:00" />
+<meta property="article:modified_time" content="2020-11-28 00:00:00" />
+<meta property="article:section" content="Section" />
+<meta itemprop="name" content="MineXON">
+<meta itemprop="description" content="MINEXON bir minecraft sunucuları için hazırlanmış gelişmiş minecraft sunucu yönetim yazılımıdır. Birçok özelliği sayesinde sunucu yöneticilerin iş yüklerini hafifletiyor.">
+<meta itemprop="image" content="/">
+<link rel="canonical" href="https://www.minexon.net/" />
+<style type="text/css">@keyframes hideLoader{0%{ width: 100%; height: 100%; }100%{ width: 0; height: 0; }  }  body > div.loader{ position: fixed; background: white; width: 100%; height: 100%; z-index: 1071; opacity: 0; transition: opacity .5s ease; overflow: hidden; pointer-events: none; display: flex; align-items: center; justify-content: center;}body:not(.loaded) > div.loader{ opacity: 1;}body:not(.loaded){ overflow: hidden;}  body.loaded > div.loader{animation: hideLoader .5s linear .5s forwards;  } /* Typing Animation */.loading-animation {width: 6px;height: 6px;border-radius: 50%;animation: typing 1s linear infinite alternate;position: relative;left: -12px;}@keyframes typing {0% {background-color: rgba(100,100,100, 1);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 0.2),24px 0px 0px 0px rgba(100,100,100, 0.2);}25% {background-color: rgba(100,100,100, 0.4);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 2),24px 0px 0px 0px rgba(100,100,100, 0.2);}75% {background-color: rgba(100,100,100, 0.4);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 0.2),24px 0px 0px 0px rgba(100,100,100, 1);}}::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background-color:#3755be;}::-webkit-scrollbar-track{background-color:rgb(243, 244, 246)}::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background-color:#3755be;}::-webkit-scrollbar-track{background-color:rgb(243, 244, 246)}</style>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript">window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });</script>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
+<link type="text/css" rel="stylesheet" href="/main/theme/sources/plugins/font-awesome/free/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.css">
+<link type="text/css" rel="stylesheet" href="/main/theme/assets/css/theme.min.css?v=12" rel="stylesheet" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-237635930-1" type="d1cb45cc307a3ab7595d9a3b-text/javascript">
+</script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-237635930-1');
+</script>
+
+</head>
+<body>
+<style type="text/css">.btn.back-to-top {right: 0; left: 1.5rem;}</style>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=UA-237635930-1" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="loader">
+<div class="loading-animation"></div>
+</div><style type="text/css">
+.m-navbar .nav-link {
+  font-size: 15px;
+}
+.m-navbar-top {
+  max-width: 1068px;
+  top: 0px;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 60px;
+}
+@media (max-width: 920px) {
+  .m-navbar-top {
+    background-color: #E9EEF6;
+    height: auto;
+  }
+}
+.ml-5-tr {
+  margin-left: 2rem;
+}
+.dropdown-item:not(:last-child) {margin-bottom: 0.25rem;}.dropdown-item {font-size: .875rem;border-radius: 0.3125rem;}.dropdown-item {display: block;width: 100%;padding: 0.5rem 1rem;clear: both;font-weight: 400;color: #1e2022;text-align: inherit;white-space: nowrap;background-color: transparent;border: 0;padding-left: 2rem !important;}.dropdown-item:focus,.dropdown-item:hover{color:#1b1d1f;background-color:rgba(189,197,209,.2)}.dropdown-item.active,.dropdown-item:active{color:#1e2022;text-decoration:none;background-color:rgba(189,197,209,.2)}.dropdown-item.disabled,.dropdown-item:disabled{color:#97a4af;pointer-events:none;background-color:transparent}.dropdown-item i{display:inline-block;opacity:.7;width:1.5rem;color:#677788}.dropdown-item span{font-size: .9rem;font-weight: 450;}.dropdown-item:hover span{font-size: .9rem;font-weight: 600;}
+.lang.dropdown-item{padding-left: .5rem !important;padding-right: .5rem !important;}
+</style>
+<div class="navbar-container">
+<nav class="navbar navbar-expand-lg justify-content-between position-fixed m-navbar-top" data-sticky="top">
+<div class="container" style="max-width: 1300px;">
+<div class="col flex-fill px-0 d-flex justify-content-between">
+<a class="navbar-brand mr-0 fade-page" href="/">
+<img src="/assets/images/minexon-logo.png" alt="MineXON - Brand Logo" width="160">
+</a>
+<div class="dropdown d-block d-md-none" style="margin-top: .7rem; margin-left: 5rem;">
+<button class="btn dropdown-toggle" data-toggle="dropdown-grid" data-hover="true" type="button" aria-expanded="false" aria-haspopup="true"><i class="flag-icon flag-icon-tr" title="Türkçe"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon" data-src="/main/theme/assets/img/icons/interface/arrow-caret.svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M14.4444 8.41358C14.7776 8.2281 15.1875 8.46907 15.1875 8.85048V15.1495C15.1875 15.5309 14.7776 15.7719 14.4444 15.5864L8.78505 12.4369C8.44258 12.2463 8.44258 11.7537 8.78505 11.5631L14.4444 8.41358Z" fill="#212529"></path></svg></button>
+<div class="dropdown-menu row" style="position: absolute; z-index: 99999; margin-left: -24px;">
+<div class="col-auto" data-dropdown-content="" style=" margin-left: -24px;">
+<div class="card card-sm card-body shadow">
+<h6>Diller</h6>
+<a href="/main/index.php?language=tr&ref=/" class="lang dropdown-item"><i class="flag-icon flag-icon-tr mr-2" title="Türkçe"></i> Türkçe</a>
+<a href="/main/index.php?language=en&ref=/" class="lang dropdown-item"><i class="flag-icon flag-icon-gb mr-2" title="Türkçe"></i> English</a>
+</div>
+</div>
+</div>
+</div>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+<img class="icon navbar-toggler-open" src="/main/theme/assets/img/icons/interface/menu.svg" alt="menu interface icon" data-inject-svg />
+<img class="icon navbar-toggler-close" src="/main/theme/assets/img/icons/interface/cross.svg" alt="cross interface icon" data-inject-svg />
+</button>
+</div>
+<div class="collapse navbar-collapse justify-content-end m-navbar">
+<div class="py-2 py-lg-0">
+<ul class="navbar-nav">
+<li class="nav-item" style="width: 90px;">
+<a href="/" class="nav-link text-dark">Anasayfa</a>
+</li>
+<li class="nav-item">
+<a href="/news" class="nav-link text-dark">Haberler</a>
+</li>
+<li class="nav-item" style="width: 80px">
+<a href="/themes" class="nav-link text-dark">Temalar</a>
+</li>
+<li class="nav-item" style="width: 116px">
+<a href="/buy" class="nav-link text-dark">Fiyatlandırma</a>
+</li>
+<li class="nav-item">
+<a href="/features" class="nav-link text-dark">Özellikler</a>
+</li>
+<li class="nav-item" style="width: 70px">
+<a href="//demo.minexon.net/tr/default" class="nav-link text-dark">Demo</a>
+</li>
+<li class="nav-item">
+<a href="/contact" class="nav-link text-dark">İletişim</a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link text-dark dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Yardım</a>
+<div class="dropdown-menu row" style="left: -727px;">
+<div class="col-auto px-0" data-dropdown-content="" style="left: 727px;">
+<div class="bg-white rounded border shadow-lg o-hidden">
+<div class="list-group list-group-flush">
+<a href="https://yardim.minexon.net/" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon icon-md" data-src="/main/theme/assets/img/icons/theme/files/selected-file.svg">
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<polygon points="0 0 24 0 24 24 0 24" opacity="0"></polygon>
+<path d="M4.85714286,1 L11.7364114,1 C12.0910962,1 12.4343066,1.12568431 12.7051108,1.35473959 L17.4686994,5.3839416 C17.8056532,5.66894833 18,6.08787823 18,6.52920201 L18,19.0833333 C18,20.8738751 17.9795521,21 16.1428571,21 L4.85714286,21 C3.02044787,21 3,20.8738751 3,19.0833333 L3,2.91666667 C3,1.12612489 3.02044787,1 4.85714286,1 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+<path d="M6.85714286,3 L14.7364114,3 C15.0910962,3 15.4343066,3.12568431 15.7051108,3.35473959 L20.4686994,7.3839416 C20.8056532,7.66894833 21,8.08787823 21,8.52920201 L21,21.0833333 C21,22.8738751 20.9795521,23 19.1428571,23 L6.85714286,23 C5.02044787,23 5,22.8738751 5,21.0833333 L5,4.91666667 C5,3.12612489 5.02044787,3 6.85714286,3 Z M8,12 C7.44771525,12 7,12.4477153 7,13 C7,13.5522847 7.44771525,14 8,14 L15,14 C15.5522847,14 16,13.5522847 16,13 C16,12.4477153 15.5522847,12 15,12 L8,12 Z M8,16 C7.44771525,16 7,16.4477153 7,17 C7,17.5522847 7.44771525,18 8,18 L11,18 C11.5522847,18 12,17.5522847 12,17 C12,16.4477153 11.5522847,16 11,16 L8,16 Z" fill="#000000" fill-rule="nonzero"></path>
+</g>
+</svg>
+<div class="text-body ml-3">
+<span>Dökümanlar</span>
+<div class="text-small text-muted">Yardım merkezine gitmek için tıkla!</div>
+</div>
+</a>
+<a href="https://discord.minexon.net" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon icon-md" data-src="/main/theme/assets/img/icons/theme/communication/chat-4.svg">
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+<path d="M21.9999843,15.009808 L22.0249378,15 L22.0249378,19.5857864 C22.0249378,20.1380712 21.5772226,20.5857864 21.0249378,20.5857864 C20.7597213,20.5857864 20.5053674,20.4804296 20.317831,20.2928932 L18.0249378,18 L5,18 C3.34314575,18 2,16.6568542 2,15 L2,6 C2,4.34314575 3.34314575,3 5,3 L19,3 C20.6568542,3 22,4.34314575 22,6 L22,15 C22,15.0032706 21.9999948,15.0065399 21.9999843,15.009808 Z M6.16794971,10.5547002 C7.67758127,12.8191475 9.64566871,14 12,14 C14.3543313,14 16.3224187,12.8191475 17.8320503,10.5547002 C18.1384028,10.0951715 18.0142289,9.47430216 17.5547002,9.16794971 C17.0951715,8.86159725 16.4743022,8.98577112 16.1679497,9.4452998 C15.0109146,11.1808525 13.6456687,12 12,12 C10.3543313,12 8.9890854,11.1808525 7.83205029,9.4452998 C7.52569784,8.98577112 6.90482849,8.86159725 6.4452998,9.16794971 C5.98577112,9.47430216 5.86159725,10.0951715 6.16794971,10.5547002 Z" fill="#000000"></path>
+</g>
+</svg>
+<div class="text-body ml-3">
+<span>Destek</span>
+<div class="text-small text-muted">Destek merkezine gitmek için tıkla!</div>
+</div>
+</a>
+<a href="/videos" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon icon-md" data-src="/main/theme/assets/img/icons/theme/design/position.svg">
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+<path d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z" fill="#000000"></path>
+</g>
+</svg>
+<div class="text-body ml-3">
+<span>Videolar</span>
+<div class="text-small text-muted">Yardım videolarını izlemek için tıkla!</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="collapse navbar-collapse justify-content-end col flex-fill px-0 ml-5-tr">
+<div class="dropdown d-none d-md-block">
+<button class="btn dropdown-toggle" data-toggle="dropdown-grid" data-hover="true" type="button" aria-expanded="false" aria-haspopup="true"><i class="flag-icon flag-icon-tr" title="Türkçe"></i><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="injected-svg icon" data-src="/main/theme/assets/img/icons/interface/arrow-caret.svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M14.4444 8.41358C14.7776 8.2281 15.1875 8.46907 15.1875 8.85048V15.1495C15.1875 15.5309 14.7776 15.7719 14.4444 15.5864L8.78505 12.4369C8.44258 12.2463 8.44258 11.7537 8.78505 11.5631L14.4444 8.41358Z" fill="#212529"></path></svg></button>
+<div class="dropdown-menu row" style="margin-left: -24px;">
+<div class="col-auto" data-dropdown-content="" style="margin-left: -24px;">
+<div class="card card-sm card-body shadow">
+<h6>Diller</h6>
+<a href="/main/index.php?language=tr&ref=/" class="lang dropdown-item"><i class="flag-icon flag-icon-tr mr-2" title="Türkçe"></i> Türkçe</a>
+<a href="/main/index.php?language=en&ref=/" class="lang dropdown-item"><i class="flag-icon flag-icon-gb mr-2" title="Türkçe"></i> English</a>
+</div>
+</div>
+</div>
+</div>
+<a href="/sign-in" class="btn btn-primary btn-transition ml-lg-1 hover-shadow-3d">Oturum Aç</a>
+</div>
+</div>
+</nav>
+</div>
+<style type="text/css">
+.trial-video-margin {
+  margin-left: 144px;
+}
+.trial-video {
+  width: 500px;
+  height: 280px;
+}
+@media (max-width: 1000px) {
+  .trial-video {
+    width: 280px;
+    height: 160px;
+  }
+  .trial-video-margin {
+    margin-left: 45px;
+  }
+}
+</style>
+<section class="has-divider" style="top: -2rem;">
+<div class="container">
+<div class="row align-items-center justify-content-between o-hidden">
+<div class="col-md-6 order-sm-2 mb-5 mb-sm-0" data-aos="fade-left">
+<img src="https://i.ibb.co/9pXy2rt/BGF.png" alt="Image">
+</div>
+<div class="col-md-6 pr-xl-5 order-sm-1">
+<div class="d-flex mb-2">
+<span class="badge badge-primary mr-2 my-auto" style="text-transform: none;">Farkını Yarat</span>
+<a href="/features" class="text-small hover-arrow" style="margin-top: .05rem;">Farkını yaratmak için doğru yerdesin</a>
+</div>
+<h4 style="font-size: 2rem;">Yeniliğe hazır mısın?</h4>
+<h1 class="lead">Eşsiz görünüm ve güçlü sistemler ile <span class="h3" data-typed-text="" data-loop="true" data-type-speed="40" data-strings="[&quot;farkını yarat&quot;,&quot;eşsiz ol&quot;,&quot;en iyisi ol&quot;,&quot;farkını yarat&quot;]"></span>.</h1>
+<form class="d-sm-flex mb-2 mt-4">
+<input type="text" class="form-control form-control-lg mr-sm-2 mb-2 mb-sm-0" placeholder="example.com" data-toggle="startPriceDomain">
+<button class="btn btn-lg btn-primary" type="button" data-toggle="startPrice">Başla</button>
+</form>
+<span class="text-small text-muted">Hesabınızı oluşturdunuz mu? <a href="/sign-up">Hesap Oluştur</a>
+</span>
+</div>
+</div>
+<div class="row justify-content-center align-items-center text-center mt-5">
+<div class="col-3 col-sm-2 text-center py-3" data-toggle="tooltip" data-placement="bottom" title="Adalances">
+<img src="/main/theme/assets/img/landing/customer/adalances-2.png" alt="MineXON - Adalances" style="max-height: 100px">
+</div>
+<div class="col-3 col-sm-2 text-center py-3" data-toggle="tooltip" data-placement="bottom" title="AtomCraft">
+<img src="/main/theme/assets/img/landing/customer/atomcraft-2.png" alt="MineXON - AtomCraft" style="max-height: 100px">
+</div>
+<div class="col-3 col-sm-2 text-center py-3" data-toggle="tooltip" data-placement="bottom" title="Avenor">
+<img src="/main/theme/assets/img/landing/customer/avenor-2.png" alt="MineXON - Avenor" style="max-height: 100px">
+</div>
+<div class="col-3 col-sm-2 text-center py-3" data-toggle="tooltip" data-placement="bottom" title="TaklaCraft">
+<img src="/main/theme/assets/img/landing/customer/taklacraft.png" alt="MineXON - TaklaCraft" style="max-height: 100px">
+</div>
+<div class="col-3 col-sm-2 text-center py-3" data-toggle="tooltip" data-placement="bottom" title="Cold Network">
+<img src="/main/theme/assets/img/landing/customer/coldnetwork.png" alt="MineXON - Cold Network" style="max-height: 100px">
+</div>
+<div class="col-3 col-sm-2 text-center py-3" data-toggle="tooltip" data-placement="bottom" title="AesirMC">
+<img src="/main/theme/assets/img/landing/customer/aesirmc.png" alt="MineXON - AesirMC" style="max-height: 100px">
+</div>
+</div>
+</div>
+</section>
+<section class="has-divider" style="top: -4rem;">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-xl-11">
+<div class="row">
+<div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="100">
+<div class="icon-round bg-primary mr-3">
+<img class="icon bg-primary" src="/main/theme/assets/img/icons/theme/general/shield-protected.svg" alt="icon" data-inject-svg />
+</div>
+<div>
+<h4 class="mb-2">Güvenlik</h4>
+<p class="lead pr-xl-4">Üst düzey PDO kodlaması ve güçlü algoritmalar ile artık tüm verileriniz güvende.</p>
+</div>
+</div>
+<div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
+<div class="icon-round bg-primary mr-3">
+<img class="icon bg-primary" src="/main/theme/assets/img/icons/theme/code/code.svg" alt="icon" data-inject-svg />
+</div>
+<div>
+<h4 class="mb-2">Otomasyon</h4>
+<p class="lead pr-xl-4">Tüm işlemlerinizi otomasyon sistemler sayesinde kolayca yaparak iş yükünüzü en aza indirmenizi sağlıyor.</p>
+</div>
+</div>
+<div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
+<div class="icon-round bg-primary mr-3">
+<img class="icon bg-primary" src="/main/theme/assets/img/icons/theme/shopping/box-2.svg" alt="icon" data-inject-svg />
+</div>
+<div>
+<h4 class="mb-2">Bütçe Dostu</h4>
+<p class="lead pr-xl-4">Uygun satış politikamız ile herkesin cebine uyacak ve tasarruf edecek şekilde düzenlendi.</p>
+</div>
+</div>
+<div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
+<div class="icon-round bg-primary mr-3">
+<img class="icon bg-primary" src="/main/theme/assets/img/icons/theme/weather/cloudy-night.svg" alt="icon" data-inject-svg />
+</div>
+<div>
+<h4 class="mb-2">Teknik Destek</h4>
+<p class="lead pr-xl-4">Karşılaştığınız her sorunda size yardımcı olacak bir ekip sayesinde tüm sorunlarınızı en hızlı şekilde çözüyoruz.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col text-center">
+<a href="/features" class="lead hover-arrow">Daha fazlası...</a>
+</div>
+</div>
+</div>
+<div class="divider" style="top: 6rem;">
+<img class="bg-primary-alt" src="/main/theme/assets/img/dividers/divider-1.svg" alt="divider graphic" data-inject-svg />
+</div>
+</section>
+<section class="bg-primary-alt has-divider">
+<div class="container pb-0">
+<div class="row justify-content-center text-center mb-6">
+<div class="col-xl-8 col-lg-9">
+<h2 class="display-4 mx-xl-6">Hakkımızda</h2>
+<p class="lead">
+Minecraft sunucu yöneticilerin işlerini hafifletmeyi açamlayan bir yazılım şirketiyiz. Uzun yılladır bu sektörde araştırmalar yapan bir ekibiz. Tecrübelerimiz sayesinde sizlere en iyi hizmeti vermeyi hedefliyoruz. </p>
+</div>
+</div>
+<div class="row justify-content-center text-center">
+<div class="col-md-4 mb-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+<span class="display-4 text-primary-2 d-block" data-countup data-start="1" data-end="99.8" data-duration="3" data-grouping="true" data-suffix="/100" data-decimal-places="2"></span>
+<span class="h6">Memnuniyet</span>
+</div>
+<div class="col-md-4 mb-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+<span class="display-4 text-primary-2 d-block" data-countup data-start="200" data-end="800" data-duration="3" data-grouping="true" data-suffix="+"></span>
+<span class="h6">Müşteriler</span>
+</div>
+<div class="col-md-4 mb-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="300">
+<span class="display-4 text-primary-2 d-block" data-countup data-start="5000" data-end="10000" data-duration="3" data-grouping="true" data-suffix="+"></span>
+<span class="h6">Çözülmüş Talepler</span>
+</div>
+</div>
+<style type="text/css">
+      .plyr__poster {
+        margin-top: -3rem;
+      }
+    </style>
+<div class="row justify-content-center mt-6 mb-lg-n7">
+<div class="col-xl-8 col-lg-9 layer-1">
+<div class="video-poster shadow-sm rounded mb-3 trial-video trial-video-margin">
+<div class="rounded o-hidden trial-video">
+<div class="plyr" data-plyr-provider="youtube" data-plyr-embed-id="yDeuSTChoTY"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="divider">
+<img class="bg-primary-3" src="/main/theme/assets/img/dividers/divider-1.svg" alt="divider graphic" data-inject-svg />
+</div>
+</section>
+<section class="bg-primary-3 text-light mb-lg-n7">
+<div class="container pb-md-6">
+<div class="row mb-4">
+<div class="col">
+<h2 class="h1">Premium Özellikler</h2>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="100">
+<img class="icon" src="/main/theme/assets/img/icons/theme/devices/display-1.svg" alt="icon" data-inject-svg />
+<div class="ml-3">
+<h5>Gelişmiş Yönetim Paneli</h5>
+<p>
+Tüm işlemlerinizi daha kolay ve daha hızlı halledebilmeniz için kullanımı kolay bir yönetim paneli sunuyoruz. </p>
+</div>
+</div>
+<div class="col-md-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
+<img class="icon" src="/main/theme/assets/img/icons/theme/design/difference.svg" alt="icon" data-inject-svg />
+<div class="ml-3">
+<h5>Developer API</h5>
+<p>
+Geliştiriciler için hazırlanmış API dökümanlarımız sayesinde çok kolay bir şekilde projelerinizi geliştirebilirsiniz. </p>
+</div>
+</div>
+<div class="col-md-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
+<img class="icon" src="/main/theme/assets/img/icons/theme/general/expand-arrows.svg" alt="icon" data-inject-svg />
+<div class="ml-3">
+<h5>Kurulum Sihirbazı</h5>
+<p>
+Sihirbaz sayesinde hiçbir dil bilgisi gerektirmeden tek tıkla kurulum gerçekleştirebilirsiniz. </p>
+</div>
+</div>
+<div class="col-md-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
+<img class="icon" src="/main/theme/assets/img/icons/theme/media/airplay-video.svg" alt="icon" data-inject-svg />
+<div class="ml-3">
+<h5>Arayüz Tasarımları</h5>
+<p>
+Birden fazla arayüz tasarımı sayesinde zevklerinize en uygun tasarımı seçip kullanmaya başlayabilirsiniz. </p>
+</div>
+</div>
+<div class="col-md-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
+<img class="icon" src="/main/theme/assets/img/icons/theme/map/marker-1.svg" alt="icon" data-inject-svg />
+<div class="ml-3">
+<h5>Yardım Merkezi</h5>
+<p>
+Sizler için hazırlanmış dökümanlar sayesinde sorunlarınıza anında çözüm bulabilirsiniz. </p>
+</div>
+</div>
+<div class="col-md-4 d-flex mb-4" data-aos="fade-up" data-aos-delay="600">
+<img class="icon" src="/main/theme/assets/img/icons/theme/communication/chat-4.svg" alt="icon" data-inject-svg />
+<div class="ml-3">
+<h5>7/24 Teknik Destek</h5>
+<p>
+Aktif yetkili kadromuz sayesinde sizlere her yerden 7/24 teknik destek hizmeti sağlıyoruz. </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pt-md-0" style="z-index: 10;">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="card card-body border-0 o-hidden mb-0 bg-primary text-light shadow-3d">
+<div class="position-relative d-flex flex-column flex-md-row justify-content-between align-items-center">
+<div class="h3 text-center mb-md-0">Fark yaratmaya hazır mısın?</div>
+<a href="/buy" class="btn btn-lg btn-white hover-shadow-3d">Satın Al</a>
+</div>
+<div class="decoration layer-0">
+<img class="bg-primary-2" src="/main/theme/assets/img/decorations/deco-blob-1.svg" style="fill: #ff8e88;" alt="deco-blob-1 decoration" data-inject-svg />
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-primary-alt" style="margin-top: -9rem;">
+<div class="container">
+<div class="row justify-content-center text-center mb-6">
+<div class="col-xl-8 col-lg-9">
+<h2 class="display-4 mx-xl-6">Temalar</h2>
+<p class="lead">
+Birbirinden eşsiz ve uyumlu tasarımlar ile sende fark yaratmaya hazır mısın? </p>
+</div>
+</div>
+</div>
+<div class="arrows-inside highlight-selected mb-6" data-flickity='{ "autoPlay": true, "imagesLoaded": true, "wrapAround": true }'>
+<div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+<a href="/themes/default" target="_blank">
+<img src="https://www.minexon.net/assets/images/themes/landing/default.png" alt="" class="rounded shadow-3d hover-shadow-3d border">
+</a>
+</div>
+<div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+<a href="/themes/vita" target="_blank">
+<img src="https://www.minexon.net/assets/images/themes/landing/vita.png" alt="" class="rounded shadow-3d hover-shadow-3d border">
+ </a>
+</div>
+<div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+<a href="https://demo.minexon.net/tr/deluxe" target="_blank">
+<img src="https://www.minexon.net/assets/images/themes/landing/deluxe.png" alt="" class="rounded shadow-3d hover-shadow-3d border">
+</a>
+</div>
+<div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+<a href="/themes/lighten" target="_blank">
+<img src="https://www.minexon.net/assets/images/themes/landing/lighten.png" alt="" class="rounded shadow-3d hover-shadow-3d border">
+</a>
+</div>
+<div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+<a href="/themes/darken" target="_blank">
+<img src="https://www.minexon.net/assets/images/themes/landing/darken.png" alt="" class="rounded shadow-3d hover-shadow-3d border">
+</a>
+</div>
+<div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+<a href="/themes/sitary" target="_blank">
+<img src="https://www.minexon.net/assets/images/themes/sitary/home.png" alt="" class="rounded shadow-3d hover-shadow-3d border">
+</a>
+</div>
+<div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+<a href="/themes/south" target="_blank">
+<img src="https://www.minexon.net/assets/images/themes/south/black.png" alt="" class="rounded shadow-3d hover-shadow-3d border">
+</a>
+</div>
+<div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+<a href="/themes/south" target="_blank">
+<img src="https://www.minexon.net/assets/images/themes/south/dark.png" alt="" class="rounded shadow-3d hover-shadow-3d border">
+</a>
+</div>
+<div class="carousel-cell col-lg-4 col-md-5 col-9 px-2 py-3">
+<a href="/themes/south" target="_blank">
+<img src="https://www.minexon.net/assets/images/themes/south/light.png" alt="" class="rounded shadow-3d hover-shadow-3d border">
+</a>
+</div>
+</div>
+</section>
+<div class="controls-light arrows-inside highlight-selected mb-6 d-none" data-flickity='{ "autoPlay": true, "imagesLoaded": true, "wrapAround": true }'>
+<div class="carousel-cell col-xl-3 col-lg-4 col-md-5 col-9 pb-1">
+<div class="card card-body">
+<div class="mb-3 mb-md-4">
+<img src="/main/theme/assets/img/landing/customer/adalances-2.png" alt="Avatar" class="avatar avatar-lg">
+</div>
+<div class="flex-grow-1 pt-md-3">
+<h4>
+&ldquo;Çok memnunuz ve bize sağladığı ayrıcalıklar için kendilerine teşekkür ederim.&rdquo;
+</h4>
+</div>
+<div class="avatar-author d-block mt-2">
+<h6>Doğukan Adal</h6>
+<span>adalances.com</span>
+</div>
+</div>
+</div>
+<div class="carousel-cell col-xl-3 col-lg-4 col-md-5 col-9 pb-1">
+<div class="card card-body">
+<div class="mb-3 mb-md-4">
+<img src="/main/theme/assets/img/landing/customer/kafalarmc-2.png" alt="Avatar" class="avatar avatar-lg">
+</div>
+<div class="flex-grow-1 pt-md-3">
+<h4>
+&ldquo;7/24 tam destek, %100 uptime -> MINEXON&rdquo;
+</h4>
+</div>
+<div class="avatar-author d-block mt-2">
+<h6>Furkan Boğar</h6>
+<span>kafalarmc.com</span>
+</div>
+</div>
+</div>
+<div class="carousel-cell col-xl-3 col-lg-4 col-md-5 col-9 pb-1">
+<div class="card card-body">
+<div class="mb-3 mb-md-4">
+<img src="/main/theme/assets/img/landing/customer/atomcraft-2.png" alt="Avatar" class="avatar avatar-lg">
+</div>
+<div class="flex-grow-1 pt-md-3">
+<h4>
+&ldquo;İlgili, alakalı bir destek ekibine sahipler, sağolsunlar her konuda yardımcı oldular.&rdquo;
+</h4>
+</div>
+<div class="avatar-author d-block mt-2">
+<h6>Buğra Şahin</h6>
+<span>atomcraft.pw</span>
+</div>
+</div>
+</div>
+</div><input id="discount-button" class="btn btn-primary d-none" type="hidden" data-toggle="modal" data-target="#discount-modal">
+<div class="modal fade" id="discount-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content bg-primary border-0 text-light" style="background: url('/assets/uploads/images/news/29-ekim.png'); background-size: cover; border-radius: 2rem;">
+<div class="modal-body" style="backdrop-filter: brightness(0.3); border-radius: 2rem;">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<i class="fas fa-times text-white"></i>
+</button>
+<div class="m-xl-4 m-3">
+<div class="icon-round icon-round-lg bg-white mx-auto mb-4">
+<i class=" fas fa-percent" style="font-size: 1.2rem;"></i><span style="font-size: 1.6rem;">50</span>
+</div>
+<div class="text-center mb-4">
+<h4 class="h3">Cumhuriyet Bayramı İndirimi</h4>
+<p><strong>29 Ekim Cumhuriyet Bayramına</strong> özel <strong>MINEXON</strong>'da dev indirimler başladı. Sende hemen bu fırsatı kaçırmadan <strong>%50</strong>'ye varan indirimlerle <strong>MINEXON</strong> sahibi ol.</p>
+<a href="/pricing" class="btn btn-white w-50 hover-shadow-3d mt-3">Satın Al</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<input id="cookies-button" class="btn btn-primary d-none" type="hidden" data-toggle="modal" data-target="#cookies-modal">
+<div class="modal fade" id="cookies-modal" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<div class="d-flex m-2 align-items-center">
+<div class="icon icon-lg"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="injected-svg icon icon-lg bg-primary" data-src="assets/img/icons/theme/devices/cardboard-vr.svg">
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<rect opacity="0" x="0" y="0" width="24" height="24"></rect>
+<polygon fill="#000000" opacity="0.3" points="6 4 18 4 20 6.5 4 6.5"></polygon>
+<path d="M5,6 L19,6 C20.1045695,6 21,6.8954305 21,8 L20.999994,17.0000172 C20.999994,18.1045834 20.1045662,19.0000112 19,19.0000112 C17.4805018,19.0000037 16.4805051,19 16,19 C15,19 14.5,17 12,17 C9.5,17 9.5,19 8,19 C7.31386312,19 6.31387037,19.0000034 5.00002173,19.0000102 L5.00002173,19.0000216 C3.89544593,19.0000273 3.00000569,18.1045963 3,17.0000205 C3,17.000017 3,17.0000136 3,17.0000102 L3,8 C3,6.8954305 3.8954305,6 5,6 Z M8,14 C9.1045695,14 10,13.1045695 10,12 C10,10.8954305 9.1045695,10 8,10 C6.8954305,10 6,10.8954305 6,12 C6,13.1045695 6.8954305,14 8,14 Z M16,14 C17.1045695,14 18,13.1045695 18,12 C18,10.8954305 17.1045695,10 16,10 C14.8954305,10 14,10.8954305 14,12 C14,13.1045695 14.8954305,14 16,14 Z" fill="#000000"></path>
+</g>
+</svg></div>
+<div class="mx-3">
+Size daha iyi hizmet sunabilmek için çerezleri kullanıyoruz. Bu sayfayı kullanarak <a href="/privacy" target="_blank">Gizlilik Sözleşmesi'ni</a> kabul etmiş olarak sayılırsınız. </div>
+<button class="btn btn-primary" data-dismiss="modal">Tamam</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="pb-4 bg-primary-3 text-light" id="footer">
+<div class="container">
+<div class="row mb-5">
+<div class="col-6 col-lg-3 col-xl-2">
+<h5>Kurumsal</h5>
+<ul class="nav flex-column">
+<li class="nav-item">
+<a href="/about-us" class="nav-link">Hakkımızda</a>
+</li>
+<li class="nav-item">
+<a href="/contact" class="nav-link">İletişim</a>
+</li>
+<li class="nav-item">
+<a href="/privacy" class="nav-link">Gizlilik Sözleşmesi</a>
+</li>
+<li class="nav-item">
+<a href="/terms-use-perm" class="nav-link">Kullanıcı Sözleşmesi</a>
+</li>
+</ul>
+</div>
+<div class="col-6 col-lg-3 col-xl-2">
+<h5>Ürün</h5>
+<ul class="nav flex-column">
+<li class="nav-item">
+<a href="/pricing" class="nav-link">Fiyatlandırma</a>
+</li>
+<li class="nav-item">
+<a href="https://yardim.minexon.net/" class="nav-link">Yardım Merkezi<i class="fa fa-link ml-2"></i></a>
+</li>
+<li class="nav-item">
+<a href="/license-control" class="nav-link">Lisans Kontrol</a>
+</li>
+<li class="nav-item">
+<a href="//demo.minexon.net/tr/default" target="_blanck" class="nav-link">Demo <i class="fa fa-link ml-2"></i></a>
+</li>
+</ul>
+</div>
+<div class="col-6 col-lg">
+<h5>İletişim</h5>
+<ul class="list-unstyled">
+<li class="mb-3 d-flex">
+<img class="icon" src="/main/theme/assets/img/icons/theme/map/marker-1.svg" alt="marker-1 icon" data-inject-svg />
+<div class="ml-3">
+<span>Kozağaç Mh. Gerçeksöz Sk. NO: 4/B<br />Meram/Konya</span> </div>
+</li>
+<li class="mb-3 d-flex">
+<img class="icon" src="/main/theme/assets/img/icons/theme/communication/call-1.svg" alt="call-1 icon" data-inject-svg />
+<div class="ml-3">
+<span>+90 544 951 35 29</span>
+<span class="d-block text-muted text-small">Pzt - Cum, 09:00 - 19:00</span>
+</div>
+</li>
+<li class="mb-3 d-flex">
+<img class="icon" src="/main/theme/assets/img/icons/theme/communication/mail.svg" alt="mail icon" data-inject-svg />
+<div class="ml-3">
+<a href="/cdn-cgi/l/email-protection#4e272028210e2327202b36212060202b3a"><span class="__cf_email__" data-cfemail="721b1c141d321f1b1c170a1d1c5c1c1706">[email&#160;protected]</span></a>
+</div>
+</li>
+</ul>
+</div>
+<div class="col-lg-5 col-xl-4 mt-3 mt-lg-0">
+<h5>Abone Ol</h5>
+<p>Tüm olaylardan haberdar olmak için abone olabilirsiniz.</p>
+<div class="form-row">
+<div class="col-12">
+<input type="email" class="form-control mb-2" placeholder="E-posta adresinizi giriniz..." name="email" data-toggle="subscribeInput" required>
+</div>
+<div class="col-12">
+<button type="submit" class="btn btn-primary btn-loading btn-block" data-toggle="subscribe">Abone Ol</button>
+</div>
+</div>
+<small class="text-muted form-text">Abone olarak <a href="/privacy">Gizlilik Sözleşmesini</a> kabul etmiş olarak sayılırsınız. </small>
+</div>
+</div>
+<div class="row align-items-center justify-content-center">
+</div>
+<div class="row justify-content-center mb-2">
+<div class="col-auto">
+<ul class="nav">
+<li class="nav-item">
+<a href="//instagram.com/minexonsoftware" class="nav-link">
+<img class="icon " src="/main/theme/assets/img/icons/social/instagram.svg" alt="instagram social icon" data-inject-svg />
+</a>
+</li>
+<li class="nav-item">
+<a href="//twitter.com/minexonsoftware" class="nav-link">
+<img class="icon " src="/main/theme/assets/img/icons/social/twitter.svg" alt="twitter social icon" data-inject-svg />
+</a>
+</li>
+<li class="nav-item">
+<a href="https://youtube.com/channel/UCGjlYfaLiPVHsy-7aPEPrIw" class="nav-link">
+<img class="icon " src="/main/theme/assets/img/icons/social/youtube.svg" alt="youtube social icon" data-inject-svg />
+</a>
+</li>
+<li class="nav-item">
+<a href="//facebook.com/minexonsoftware" class="nav-link">
+<img class="icon " src="/main/theme/assets/img/icons/social/facebook.svg" alt="facebook social icon" data-inject-svg />
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="col col-md-auto text-center">
+<small class="text-muted"><a href="#">MINEXON Software LTD.</a> &copy; 2023, Tüm Hakları Saklıdır. </small>
+</div>
+</div>
+</div>
+</footer>
+<a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+<img class="icon" src="/main/theme/assets/img/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
+</a> <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/jquery.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/popper.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/bootstrap.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/aos.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/clipboard.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/jquery.fancybox.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/flatpickr.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/flickity.pkgd.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/ion.rangeSlider.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/isotope.pkgd.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/jarallax.min.js?v=601"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/jarallax-video.min.js?v=601"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/jarallax-element.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/jquery.countdown.min.js?v=601"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/jquery.smartWizard.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/plyr.polyfilled.min.js?v=601"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/prism.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/scrollMonitor.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/smooth-scroll.polyfills.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/svg-injector.umd.production.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/twitterFetcher_min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js" type="d1cb45cc307a3ab7595d9a3b-text/javascript"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/typed.min.js"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/theme.js?v=601"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript" src="/main/theme/assets/js/main.js?v=601"></script>
+<script type="d1cb45cc307a3ab7595d9a3b-text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/621276b81ffac05b1d7ace2b/1fsc1vh2t';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="d1cb45cc307a3ab7595d9a3b-|49" defer=""></script></body>
+</html>
